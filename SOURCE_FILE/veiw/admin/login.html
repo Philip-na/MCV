@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        .contianer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            top: 50%;
+            left: 50%;
+            
+            
+        }
+        .left{
+            display: flex;
+            flex-direction: column;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="contianer">
+        <div class="right">
+            <h1>Wellocome to sample login</h1>
+        </div>
+        <div class="left">
+            <form action="" method="post">
+                <input type="hidden" name="moduel" value="dashboard">
+                <input type="hidden" name="action"  value="login">
+                <input type="hidden" name="postAction"  value="1">
+
+                <label for="username">username </label>
+                <input type="text" name="username" id="username" required value="<?=$_POST['username'] ?? '' ?>">
+                <br><br>
+                <label for="password">password</label>
+                <input type="password" name="password" id="password" value="<?=$_POST['password'] ?? '' ?>">
+                <br><br>
+                <div class="error">
+                    <?php foreach($_SESSION['validation']['errors'] ?? [] as $error) { ?>
+                        <?=$error; ?><br>
+                    <?php } ?>
+                </div>
+                <input type="submit" value="Login">
+                <br>
+                <a href="#">sign up</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

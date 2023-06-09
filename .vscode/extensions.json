@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "xdebug.php-debug",
+        "esbenp.prettier-vscode",
+        "mohd-akram.vscode-html-format",
+        "rifi2k.format-html-in-php",
+        "thekalinga.bootstrap4-vscode",
+        "zobo.php-intellisense",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "visualstudioexptteam.vscodeintellicode",
+        "bmewburn.vscode-intelephense-client"
+    ]
+}
